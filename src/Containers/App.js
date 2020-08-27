@@ -40,8 +40,10 @@ function App() {
       <WeatherDetails
         Temperature={Temperature}
         country={country}
+        clouds={clouds}
         city={city}
         windSpeed={wind.speed}
+        coordinates={coordinates}
       ></WeatherDetails>
     </div>
   );
