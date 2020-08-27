@@ -12,15 +12,22 @@
   box-sizing: border-box;
   border: 1px solid #eee;
 }
+.City {
+  font-size: 35px;
+}
+.Temp {
+  font-size: 40px;
+  font-weight: 640;
+}
 .heading {
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .value {
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
   color: green;
 }

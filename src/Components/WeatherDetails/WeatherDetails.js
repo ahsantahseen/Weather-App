@@ -5,14 +5,14 @@ const WeatherDetails = (props) => {
   return (
     <div>
       <div className="HighLight">
-        <h1>{props.city}</h1>
-        <p>
-          <b>
-            {props.Temperature}
-            &#8457;
-          </b>
+        <h1 className="City">{props.city}</h1>
+        <h2 style={{ marginTop: "-17px", position: "relative" }}>
+          {props.clouds}
+        </h2>
+        <p className="Temp">
+          {props.Temperature}
+          &#8457;
         </p>
-        <h2>{props.clouds}</h2>
       </div>
       <div className="Side-Details">
         <p className="heading">Wind Speed:</p>
