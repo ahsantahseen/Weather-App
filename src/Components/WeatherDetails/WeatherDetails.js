@@ -25,10 +25,10 @@ const WeatherDetails = (props) => {
     "November",
     "December",
   ];
-  let date = new Date();
-  let day = days[date.getDay()];
-  let month = months[date.getMonth()];
-  let ProperDate = day + "," + date.getDate() + "  " + month;
+  let dateObj = new Date();
+  let day = days[dateObj.getDay()]; //retruns for exp:MONDAY
+  let month = months[dateObj.getMonth()]; //retruns for exp:JULY
+  let ProperDate = day + "," + dateObj.getDate() + "  " + month; //returns for exp: Friday,28 August
   return (
     <div>
       <div className="HighLight">

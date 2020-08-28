@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import axios from "axios";
 import WeatherDetails from "../Components/WeatherDetails/WeatherDetails";
 
@@ -44,4 +44,4 @@ function App() {
   );
 }
 
-export default App;
+export default withErrorHandler(App, axios);
