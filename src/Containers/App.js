@@ -6,10 +6,8 @@ import WeatherDetails from "../Components/WeatherDetails/WeatherDetails";
 function App() {
   const [Temperature, setTemperature] = useState([]);
   const [clouds, setclouds] = useState([]);
-  const [country, setcountry] = useState([]);
   const [city, setcity] = useState([]);
   const [wind, setwind] = useState([]);
-  const [coordinates, setcoordinates] = useState([]);
   const [FeelsLike, setFeelsLike] = useState([]);
 
   const [Humidity, setHumidity] = useState([]);
@@ -26,19 +24,11 @@ function App() {
         setclouds(response.data.weather[0].main);
         setcity(response.data.name);
         setwind(response.data.wind);
-        setcoordinates(response.data.coord);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
-
-  console.log(Temperature);
-  console.log(clouds);
-  console.log(city);
-  console.log(wind.speed);
-  console.log(coordinates);
-  console.log(FeelsLike);
 
   console.log(Humidity);
   return (
@@ -49,7 +39,6 @@ function App() {
         clouds={clouds}
         city={city}
         windSpeed={wind.speed}
-        coordinates={coordinates}
         Humidity={Humidity}
       ></WeatherDetails>
     </div>

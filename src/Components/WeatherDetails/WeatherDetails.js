@@ -2,12 +2,39 @@ import React from "react";
 import "./WeatherDetails.css";
 
 const WeatherDetails = (props) => {
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const months = [
+    "January",
+    "Feburary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let date = new Date();
+  let day = days[date.getDay()];
+  let month = months[date.getMonth()];
+  let ProperDate = day + "," + date.getDate() + "  " + month;
   return (
     <div>
       <div className="HighLight">
         <h1 className="City">{props.city}</h1>
         <h2 style={{ marginTop: "-17px", position: "relative" }}>
-          Friday, 28 August
+          {ProperDate}
         </h2>
         <p className="Temp">
           {props.Temperature}
