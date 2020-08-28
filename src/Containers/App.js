@@ -10,6 +10,7 @@ function App() {
   const [city, setcity] = useState([]);
   const [wind, setwind] = useState([]);
   const [coordinates, setcoordinates] = useState([]);
+  const [FeelsLike, setFeelsLike] = useState([]);
 
   useEffect(() => {
     axios
@@ -18,6 +19,8 @@ function App() {
       )
       .then((response) => {
         setTemperature(response.data.main.temp);
+
+        setFeelsLike(response.data.main.feels_like);
         setclouds(response.data.weather[0].main);
         setcountry(response.data.sys.country);
         setcity(response.data.name);
@@ -35,10 +38,12 @@ function App() {
   console.log(city);
   console.log(wind.speed);
   console.log(coordinates);
+  console.log(FeelsLike);
   return (
     <div className="App">
       <WeatherDetails
         Temperature={Temperature}
+        FeelsLike={FeelsLike}
         country={country}
         clouds={clouds}
         city={city}

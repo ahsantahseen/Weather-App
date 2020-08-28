@@ -4,13 +4,42 @@
 .Side-Details {
   display: grid;
   grid-template-columns: repeat(4, 90px);
-  text-align: center;
   color: black;
   width: 100%;
   box-shadow: 0 2px 3px #ccc;
-  padding: 4px;
+
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid #eee;
+}
+@media (min-width: 600px) {
+  .Side-Details {
+    text-align: center;
+    grid-template-columns: repeat(6, 99px);
+    justify-content: center;
+  }
+  .heading {
+    margin-left: 0;
+  }
+  .value {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .Side-Details {
+    text-align: center;
+    grid-template-columns: repeat(10, 99px);
+    font-size: larger;
+  }
+  .heading {
+    margin-left: 0px;
+    font-size: larger;
+  }
+  .value {
+    margin-left: 0px;
+    font-size: 20px;
+  }
 }
 .City {
   font-size: 35px;

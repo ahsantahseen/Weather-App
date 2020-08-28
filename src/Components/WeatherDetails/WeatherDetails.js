@@ -7,7 +7,7 @@ const WeatherDetails = (props) => {
       <div className="HighLight">
         <h1 className="City">{props.city}</h1>
         <h2 style={{ marginTop: "-17px", position: "relative" }}>
-          {props.clouds}
+          Friday, 28 August
         </h2>
         <p className="Temp">
           {props.Temperature}
@@ -17,8 +17,10 @@ const WeatherDetails = (props) => {
       <div className="Side-Details">
         <p className="heading">Wind Speed:</p>
         <p className="value">{props.windSpeed} Knots</p>
-        <p className="heading">Wind Speed:</p>
-        <p className="value">{props.windSpeed} Knots</p>
+        <p className="heading">Clouds:</p>
+        <p className="value">{props.clouds}</p>
+        <p className="heading">Feels Like:</p>
+        <p className="value">{props.FeelsLike}</p>
       </div>
     </div>
   );
