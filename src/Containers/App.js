@@ -21,7 +21,7 @@ function App() {
         setTemperature(response.data.main.temp);
         setHumidity(response.data.main.humidity);
         setFeelsLike(response.data.main.feels_like);
-        setclouds(response.data.weather[0].main);
+        setclouds(response.data.weather[0].description);
         setcity(response.data.name);
         setwind(response.data.wind);
       })
@@ -30,7 +30,6 @@ function App() {
       });
   }, []);
 
-  console.log(Humidity);
   return (
     <div>
       <WeatherDetails
