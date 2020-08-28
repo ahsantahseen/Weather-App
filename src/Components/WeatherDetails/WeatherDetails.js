@@ -21,6 +21,9 @@ const WeatherDetails = (props) => {
         <p className="value">{props.clouds}</p>
         <p className="heading">Feels Like:</p>
         <p className="value">{props.FeelsLike}</p>
+
+        <p className="heading">Humidity:</p>
+        <p className="value">{props.Humidity}</p>
       </div>
     </div>
   );

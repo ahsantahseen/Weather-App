@@ -12,6 +12,8 @@ function App() {
   const [coordinates, setcoordinates] = useState([]);
   const [FeelsLike, setFeelsLike] = useState([]);
 
+  const [Humidity, setHumidity] = useState([]);
+
   useEffect(() => {
     axios
       .get(
@@ -19,10 +21,9 @@ function App() {
       )
       .then((response) => {
         setTemperature(response.data.main.temp);
-
+        setHumidity(response.data.main.humidity);
         setFeelsLike(response.data.main.feels_like);
         setclouds(response.data.weather[0].main);
-        setcountry(response.data.sys.country);
         setcity(response.data.name);
         setwind(response.data.wind);
         setcoordinates(response.data.coord);
@@ -34,21 +35,22 @@ function App() {
 
   console.log(Temperature);
   console.log(clouds);
-  console.log(country);
   console.log(city);
   console.log(wind.speed);
   console.log(coordinates);
   console.log(FeelsLike);
+
+  console.log(Humidity);
   return (
     <div className="App">
       <WeatherDetails
         Temperature={Temperature}
         FeelsLike={FeelsLike}
-        country={country}
         clouds={clouds}
         city={city}
         windSpeed={wind.speed}
         coordinates={coordinates}
+        Humidity={Humidity}
       ></WeatherDetails>
     </div>
   );
