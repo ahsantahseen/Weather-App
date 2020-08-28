@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
+
 import axios from "axios";
 import WeatherDetails from "../Components/WeatherDetails/WeatherDetails";
 
@@ -32,7 +32,7 @@ function App() {
 
   console.log(Humidity);
   return (
-    <div className="App">
+    <div>
       <WeatherDetails
         Temperature={Temperature}
         FeelsLike={FeelsLike}
