@@ -28,7 +28,7 @@ const WeatherDetails = (props) => {
   let dateObj = new Date();
   let day = days[dateObj.getDay()]; //retruns for exp:MONDAY
   let month = months[dateObj.getMonth()]; //retruns for exp:JULY
-  const ProperDate = day + "," + dateObj.getDate() + "  " + month; //returns for exp: Friday,28 August
+  const ProperDate = day + ", " + dateObj.getDate() + "  " + month; //returns for exp: Friday,28 August
   const clouds = props.clouds.toString();
   const ProperClouds = clouds.charAt(0).toUpperCase() + clouds.slice(1);
   return (
@@ -36,7 +36,7 @@ const WeatherDetails = (props) => {
       <div className="HighLight">
         <h1 className="City">{props.city}</h1>
         <h2 style={{ marginTop: "-17px", position: "relative" }}>
-          {ProperClouds}
+          {ProperDate}
         </h2>
         <p className="Temp">
           {props.Temperature}

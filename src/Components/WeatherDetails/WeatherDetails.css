@@ -17,8 +17,9 @@
 @media (min-width: 600px) {
   .Side-Details {
     text-align: center;
-    grid-template-columns: repeat(1, 99px);
+    justify-items: center;
     justify-content: center;
+    grid-template-columns: repeat(1, 99px);
   }
   .heading {
     font-size: 20px;
@@ -32,14 +33,14 @@
   .Side-Details {
     text-align: center;
     grid-template-columns: repeat(1, 99px);
-    font-size: larger;
   }
   .heading {
-    font-size: 15px;
-    color: beige;
+    text-align: center;
+    font-size: 25px;
   }
   .value {
-    font-size: 20px;
+    text-align: center;
+    font-size: 23px;
   }
 }
 .City {
@@ -50,11 +51,12 @@
   font-weight: 640;
 }
 .heading {
-  font-size: 14px;
+  white-space: nowrap;
 }
 
 .value {
-  font-size: 20 px;
+  position: relative;
+  margin-top: -5px;
   white-space: nowrap;
   color: rgb(155, 247, 155);
 }
