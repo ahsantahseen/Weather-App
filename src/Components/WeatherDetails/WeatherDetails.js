@@ -53,11 +53,11 @@ const WeatherDetails = (props) => {
       </div>
       <div className="Side-Details">
         <p className="heading">Feels Like:</p>
-        <p className="value">{props.FeelsLike}</p>
+        <p className="value">{props.FeelsLike} &#8457;</p>
       </div>
       <div className="Side-Details">
         <p className="heading">Humidity:</p>
-        <p className="value">{props.Humidity}</p>
+        <p className="value">{props.Humidity} %</p>
       </div>
     </div>
   );
