@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import axios from "axios";
 import WeatherDetails from "../Components/WeatherDetails/WeatherDetails";
+import Footerbar from "../Components/UI/footerbar/footerbar";
 
 function App() {
   const [Temperature, setTemperature] = useState([]);
@@ -40,6 +41,7 @@ function App() {
         windSpeed={wind.speed}
         Humidity={Humidity}
       ></WeatherDetails>
+      <Footerbar></Footerbar>
     </div>
   );
 }

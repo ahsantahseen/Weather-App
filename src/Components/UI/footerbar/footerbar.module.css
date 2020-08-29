@@ -1,0 +1,24 @@
+.footerbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+.footerbar-content {
+  flex: 1;
+}
+@media (min-width: 499px) {
+  .footerbar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+  .footerbar-content {
+    flex: 1;
+  }
+}
