@@ -5,4 +5,4 @@
 3.) Once you've installed the app, type "npm start" and it should start on your local network and availiable via Browser. 
 
 ### Screenshots 
-(https://i.ibb.co/ZHCHKyG/weather-App.jpg)
+!(https://i.ibb.co/ZHCHKyG/weather-App.jpg)
