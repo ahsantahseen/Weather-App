@@ -40,7 +40,7 @@ const WeatherDetails = (props) => {
         </h2>
         <p className="Temp">
           {props.Temperature}
-          &#8457;
+          &#8451;
         </p>
       </div>
       <div className="Side-Details">
@@ -53,7 +53,7 @@ const WeatherDetails = (props) => {
       </div>
       <div className="Side-Details">
         <p className="heading">Feels Like:</p>
-        <p className="value">{props.FeelsLike} &#8457;</p>
+        <p className="value">{props.FeelsLike} &#8451;;</p>
       </div>
       <div className="Side-Details">
         <p className="heading">Humidity:</p>

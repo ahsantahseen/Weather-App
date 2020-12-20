@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "http://api.openweathermap.org/data/2.5/weather?q=Karachi&appid=7c62ba2fb4efdda37f2a95565be8eb87"
+        "http://api.openweathermap.org/data/2.5/weather?q=Karachi&appid=7c62ba2fb4efdda37f2a95565be8eb87&units=metric"
       )
       .then((response) => {
         setTemperature(response.data.main.temp);
