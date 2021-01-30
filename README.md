@@ -8,6 +8,7 @@
 <br>
 3.) Once you've installed the app, type "npm start" and it should start on your local network and availiable via Browser. 
 
+(Note: New version will be having a production soon! so surge will have old version")
 ### Screenshots 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/pj3zvG5/Weather2.png" alt="Weather2" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/nCnhBgN/Weather3.png" alt="Weather3" border="0"></a>
