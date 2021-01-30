@@ -1,5 +1,9 @@
-import React from "react";
-import "./WeatherDetails.css";
+import React,{useState} from "react";
+import {Card,Alert,Button} from 'react-bootstrap'
+import {useAuth} from "../../Contexts/AuthContext"
+import {Link,useHistory} from "react-router-dom"
+
+
 
 const WeatherDetails = (props) => {
   const days = [
@@ -31,35 +35,47 @@ const WeatherDetails = (props) => {
   const ProperDate = day + ", " + dateObj.getDate() + "  " + month; //returns for exp: Friday,28 August
   const clouds = props.clouds.toString();
   const ProperClouds = clouds.charAt(0).toUpperCase() + clouds.slice(1);
+
+  const [error, seterror] = useState('');
+  const {currentUser,Logout}=useAuth();
+  const history=useHistory();
+  
+  const handleLogout=async()=>{
+   seterror('')
+   try{
+     await Logout()
+     history.push("/login")
+   }
+   catch{
+      seterror("Failure! cannot logout")
+    }
+  }
+  
   return (
-    <div>
-      <div className="HighLight">
-        <h1 className="City">{props.city}</h1>
-        <h2 style={{ marginTop: "-17px", position: "relative" }}>
-          {ProperDate}
-        </h2>
-        <p className="Temp">
-          {props.Temperature}
-          &#8451;
-        </p>
-      </div>
-      <div className="Side-Details">
-        <p className="heading">Wind Speed:</p>
-        <p className="value">{props.windSpeed} Knots</p>
-      </div>
-      <div className="Side-Details">
-        <p className="heading">Clouds:</p>
-        <p className="value">{ProperClouds}</p>
-      </div>
-      <div className="Side-Details">
-        <p className="heading">Feels Like:</p>
-        <p className="value">{props.FeelsLike} &#8451;;</p>
-      </div>
-      <div className="Side-Details">
-        <p className="heading">Humidity:</p>
-        <p className="value">{props.Humidity} %</p>
-      </div>
+    <>
+    <Card>
+      <Card.Body>
+        <h2 className="text-center mb-4">Profile</h2>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <strong>Email: </strong>{currentUser.email}
+        <Link to="/update-profile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
+      </Card.Body>
+    </Card>
+    
+    <Card className="mt-2">
+      <Card.Body>
+        <h2 className="text-center mb-4">{ProperDate}</h2>
+        <p><strong>Temperature: </strong>{props.Temperature}  &#8451;</p>
+        <p><strong>Wind Speed: </strong>{props.windSpeed}  Knots</p>
+        <p><strong>Clouds: </strong>{ProperClouds}  </p>
+        <p><strong>Feels Like: </strong>{props.Temperature}  &#8451;</p>
+        <p><strong>Humidity: </strong>{props.Humidity}  %;</p>
+      </Card.Body>
+    </Card>
+    <div className="w-100 text-center mt-2">
+      <Button variant="link" onClick={handleLogout}>Log Out</Button>
     </div>
+    </>
   );
 };
 
