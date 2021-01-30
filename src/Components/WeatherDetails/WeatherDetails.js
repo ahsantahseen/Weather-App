@@ -61,7 +61,7 @@ const WeatherDetails = (props) => {
         
     <h2 className="mb-4 text-center">Profile <FaUserCircle color="blue" size="24" style={{verticalAlign: '-1px'}}/></h2>
         {error && <Alert variant="danger">{error}</Alert>}
-        <FaEnvelope color="blue" size="16" style={{verticalAlign: '-4px'}}/> <strong> Email: </strong>{currentUser.email}
+        <FaEnvelope color="blue" size="16" style={{verticalAlign: '-3px'}}/> <strong> Email: </strong>{currentUser.email}
         <Link to="/update-profile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
       </Card.Body>
     </Card>
@@ -74,7 +74,7 @@ const WeatherDetails = (props) => {
         <p><FaWind color="grey"/><strong> Wind Speed: </strong>{props.windSpeed}  Knots</p>
         <p><FaCloud color="lightblue"/><strong> Clouds: </strong>{ProperClouds}  </p>
         <p><FaThermometerHalf color="lime"/><strong> Feels Like: </strong>{props.Temperature}  &#8451;</p>
-        <p><FaSun color="orange"/><strong> Humidity: </strong>{props.Humidity}  %;</p>
+        <p><FaSun color="orange"/><strong> Humidity: </strong>{props.Humidity}  %</p>
       </Card.Body>
     </Card>
     <div className="w-100 text-center mt-2">

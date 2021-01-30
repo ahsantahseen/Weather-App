@@ -8,7 +8,7 @@ const Signup = () => {
     const emailRef=useRef()
     const passwordRef=useRef()
     const passwordConfirmationRef=useRef()
-    const {signUp,currentUser}=useAuth()
+    const {signUp}=useAuth()
     const [error, seterror] = useState('')
     const [loading, setloading] = useState(false)
     const history=useHistory();
@@ -52,7 +52,7 @@ const Signup = () => {
                           <Form.Label>Confirm your password</Form.Label>
                           <Form.Control type="password" ref={passwordConfirmationRef} required></Form.Control>
                       </Form.Group>
-                      <Button disabled={loading} type="submit" className="w-100 text-center mt-2">Sign In</Button>
+                      <Button disabled={loading} type="submit" className="w-100 text-center mt-2">Create your account</Button>
                   </Form>
               </Card.Body>
           </Card>

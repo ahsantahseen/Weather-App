@@ -40,12 +40,12 @@ const Login = () => {
                   
                   <Form onSubmit={SubmissionHandler}>
                       <Form.Group id="email">
-                          <Form.Label>Email <FaEnvelope color="blue" style={{verticalAlign:"-2px"}}/></Form.Label>
+                      <FaEnvelope color="blue" style={{verticalAlign:"-2px"}}/><Form.Label>&nbsp;Email</Form.Label>
                           <Form.Control type="email" ref={emailRef} required></Form.Control>
                       </Form.Group>
                       
                       <Form.Group id="password">
-                          <Form.Label>Password <FaLock color="blue" style={{verticalAlign:"-3px"}}/></Form.Label>
+                      <FaLock color="blue" style={{verticalAlign:"-3px"}}/><Form.Label>&nbsp;Password </Form.Label>
                           <Form.Control type="password" ref={passwordRef} required></Form.Control>
                       </Form.Group>
                       <Button disabled={loading} type="submit" className="w-100 text-center mt-2">Log In</Button>
