@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import axios from "axios";
 import WeatherDetails from "../Components/WeatherDetails/WeatherDetails";
-import Footerbar from "../Components/UI/footerbar/footerbar";
+
 import Signup from "../Components/Signup/Signup"
 import {Container} from "react-bootstrap"
 import {AuthProvider} from "../Contexts/AuthContext"
