@@ -3,6 +3,7 @@ import React,{useRef,useState} from 'react'
 import {Form,Card,Button,Alert} from 'react-bootstrap'
 import {useAuth} from "../../Contexts/AuthContext"
 import {Link,useHistory} from "react-router-dom"
+import { FaLock, FaSun,FaEnvelope } from 'react-icons/fa'
 
 const Login = () => {
     const emailRef=useRef()
@@ -32,17 +33,19 @@ const Login = () => {
         <>
           <Card>
               <Card.Body>
-                  <h2 className="text-center mb-4">Login</h2>
+                  
+              <h2 className="text-center mb-4">Weather App <FaSun color="orange" style={{verticalAlign:"middle"}}/></h2>
+                  <h6 className="text-center mb-4">Enter your credentials to Log in</h6>
                   {error && <Alert variant="danger">{error}</Alert>}
                   
                   <Form onSubmit={SubmissionHandler}>
                       <Form.Group id="email">
-                          <Form.Label>Email</Form.Label>
+                          <Form.Label>Email <FaEnvelope color="blue" style={{verticalAlign:"-2px"}}/></Form.Label>
                           <Form.Control type="email" ref={emailRef} required></Form.Control>
                       </Form.Group>
                       
                       <Form.Group id="password">
-                          <Form.Label>Password</Form.Label>
+                          <Form.Label>Password <FaLock color="blue" style={{verticalAlign:"-3px"}}/></Form.Label>
                           <Form.Control type="password" ref={passwordRef} required></Form.Control>
                       </Form.Group>
                       <Button disabled={loading} type="submit" className="w-100 text-center mt-2">Log In</Button>
