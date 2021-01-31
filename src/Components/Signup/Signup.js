@@ -3,6 +3,7 @@ import React,{useRef,useState} from 'react'
 import {Form,Card,Button,Alert} from 'react-bootstrap'
 import {useAuth} from "../../Contexts/AuthContext"
 import {Link,useHistory} from "react-router-dom"
+import {FaEnvelope,FaLock,FaUserAlt} from 'react-icons/fa'
 
 const Signup = () => {
     const emailRef=useRef()
@@ -34,22 +35,23 @@ const Signup = () => {
         <>
           <Card>
               <Card.Body>
-                  <h2 className="text-center mb-4">Sign Up</h2>
+              <h2 className="text-center mb-4">Sign Up <FaUserAlt color="orange" style={{verticalAlign:"-5px"}}/></h2>
+                  <h6 className="text-center mb-4">Create an account! It's free and will always be</h6>
                   {error && <Alert variant="danger">{error}</Alert>}
                   
                   <Form onSubmit={SubmissionHandler}>
                       <Form.Group id="email">
-                          <Form.Label>Email</Form.Label>
+                      <FaEnvelope color="blue" style={{verticalAlign:"-2px"}}/><Form.Label>&nbsp;Email</Form.Label>
                           <Form.Control type="email" ref={emailRef} required></Form.Control>
                       </Form.Group>
                       
                       <Form.Group id="password">
-                          <Form.Label>Password</Form.Label>
+                      <FaLock color="blue" style={{verticalAlign:"-3px"}}/><Form.Label>&nbsp;Password (at least 6 characters)</Form.Label>
                           <Form.Control type="password" ref={passwordRef} required></Form.Control>
                       </Form.Group>
                       
                       <Form.Group id="passwordConfirmation">
-                          <Form.Label>Confirm your password</Form.Label>
+                          <FaLock color="blue" style={{verticalAlign:"-3px"}}/><Form.Label>&nbsp;Confirm your password</Form.Label>
                           <Form.Control type="password" ref={passwordConfirmationRef} required></Form.Control>
                       </Form.Group>
                       <Button disabled={loading} type="submit" className="w-100 text-center mt-2">Create your account</Button>

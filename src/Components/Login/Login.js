@@ -35,7 +35,7 @@ const Login = () => {
               <Card.Body>
                   
               <h2 className="text-center mb-4">Weather App <FaSun color="orange" style={{verticalAlign:"middle"}}/></h2>
-                  <h6 className="text-center mb-4">Enter your credentials to Log in</h6>
+                  <h6 className="text-center mb-4">Enter your credentials to proceed</h6>
                   {error && <Alert variant="danger">{error}</Alert>}
                   
                   <Form onSubmit={SubmissionHandler}>
